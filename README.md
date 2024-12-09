@@ -14,9 +14,7 @@ Welcome to the **React TypeScript Signup/Login Application** repository! This pr
 3. [Features](#features)
 4. [Getting Started](#getting-started)
 5. [Running the Application](#running-the-application)
-6. [Debugging Issues & Solutions](#debugging-issues-solutions)
-7. [Contributing](#contributing)
-8. [License](#license)
+6. [License](#license)
 
 ---
 
@@ -130,61 +128,6 @@ yarn test
 
 This will run any test files if you've added tests using **Jest** or other testing libraries.
 
----
-
-## Debugging Issues & Solutions
-
-Here is a list of common issues encountered while setting up or running the project, along with solutions to resolve them:
-
-### 1. **Error: "Module not found: Can't resolve 'react-router-dom'"**
-
-**Solution**: Make sure to install `react-router-dom` by running:
-
-```bash
-npm install react-router-dom
-# or
-yarn add react-router-dom
-```
-
-### 2. **Error: "TypeScript error: TS2345: Argument of type 'string' is not assignable to parameter of type 'SetStateAction<...>'"**
-
-**Solution**: This error occurs when the state is not typed correctly. Make sure to type your `useState` hooks properly, for example:
-
-```tsx
-const [email, setEmail] = useState<string>('');
-const [password, setPassword] = useState<string>('');
-```
-
-### 3. **Login form not submitting or incorrect validation**
-
-**Solution**: Ensure you have correctly set up **Formik** with appropriate validation from **Yup**. The `onSubmit` function should correctly handle form submission, and make sure that form validation triggers properly before submission.
-
-### 4. **Password strength not updating on every keystroke**
-
-**Solution**: Ensure that the `handlePasswordChange` function is linked to both the Formik `handleChange` function and the password strength calculation.
-
-### 5. **LocalStorage Data Not Persisting on Reload**
-
-**Solution**: Check that you are setting and getting the localStorage values correctly. For example, after user login or signup, check whether `localStorage.setItem('key', value)` is being called, and verify retrieval with `localStorage.getItem('key')`.
-
-### 6. **Redirect after Successful Signup Not Working**
-
-**Solution**: Make sure you are using the **useNavigate** hook from **react-router-dom** to programmatically navigate after a successful form submission. For example:
-
-```tsx
-const navigate = useNavigate();
-navigate('/login');
-```
-
----
-
-## Contributing
-
-If you'd like to contribute to the project, feel free to fork the repository and create a pull request. When submitting a pull request, make sure to:
-
-- Follow the project's coding style and conventions.
-- Ensure tests are included for new features or bug fixes.
-- Provide clear and concise commit messages.
 
 ---
 
