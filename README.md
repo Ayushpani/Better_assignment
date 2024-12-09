@@ -18,6 +18,7 @@ Welcome to the **React TypeScript Signup/Login Application** repository! This pr
 6. [Getting Started](#getting-started)
 7. [Running the Application](#running-the-application)
 8. [License](#license)
+9. [Result](#result)
 
 ---
 
@@ -189,3 +190,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **React Router DOM**: For navigation between pages.
 
 ---
+
+## Result
+
+![Screen Recording 2024-12-09 140305](https://github.com/user-attachments/assets/7a1bd9a0-be03-4d8f-95cb-ea1cc357a208)
