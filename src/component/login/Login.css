@@ -1,0 +1,196 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(to bottom right, #1e2a47, #2a3c64); /* Dark blue gradient */
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centered Container */
+.login-container {
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    backdrop-filter: blur(12px); /* Blur effect */
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+}
+
+.login-container:hover {
+    transform: translateY(-3px);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #ecf0f1;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #bdc3c7;
+    position: relative;
+}
+
+/* Input Fields */
+input {
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: #ecf0f1;
+}
+
+input:focus {
+    border-color: #0858ec; /* Purple border on focus */
+    box-shadow: 0px 4px 8px rgba(47, 40, 141, 0.3);
+    background: rgba(255, 255, 255, 0.2); /* Slightly darker focus background */
+}
+
+input.error {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1); /* Error background */
+}
+
+input.error:focus {
+    box-shadow: 0px 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* Error Messages */
+.error {
+    font-size: 0.85rem;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+/* Button */
+button {
+    background: rgba(52, 152, 219, 0.8); /* Semi-transparent blue button */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: rgba(52, 152, 219, 1);
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 15px rgba(52, 152, 219, 0.3);
+}
+
+button:disabled {
+    background: rgba(52, 152, 219, 0.3);
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Credentials List */
+.stored-credentials {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.credential-item {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.credential-item:hover {
+    background-color: rgba(52, 152, 219, 0.2);
+}
+
+.hidden-password {
+    color: #bdc3c7;
+}
+
+/* Password Visibility Toggle */
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Sign Up Link */
+.signup-link {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.link-to-signup {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.link-to-signup:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
